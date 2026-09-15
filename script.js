@@ -32,14 +32,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const commentError = document.getElementById('commentError');
     const successMsg = document.getElementById('formSuccess');
 
-    // Проверка имени
     function validateName(value) {
         if (!value.trim()) return 'Введите ваше имя';
         if (value.trim().length < 2) return 'Имя слишком короткое';
         return '';
     }
 
-    // Проверка телефона
     function validatePhone(value) {
         if (!value.trim()) return 'Введите номер телефона';
         const cleaned = value.replace(/\D/g, '');
@@ -53,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
         return '';
     }
 
-    // Очистка ошибок при вводе
     nameInput.addEventListener('input', function () {
         if (this.value.trim().length >= 2) {
             this.classList.remove('error');
@@ -71,16 +68,14 @@ document.addEventListener('DOMContentLoaded', function () {
     userCom.addEventListener('input', function () {
         if (this.value.trim()) {
             this.classList.remove('error');
-            commentError.textContent = '';   // ← очищаем span ошибки
+            commentError.textContent = '';   
         }
     })
 
-    // Отправка формы
     form.addEventListener('submit', function (e) {
         e.preventDefault();
         let isValid = true;
 
-        // Проверка имени
         const nameErr = validateName(nameInput.value);
         if (nameErr) {
             nameInput.classList.add('error');
@@ -91,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function () {
             nameError.textContent = '';
         }
 
-        // Проверка телефона
         const phoneErr = validatePhone(phoneInput.value);
         if (phoneErr) {
             phoneInput.classList.add('error');
@@ -102,15 +96,14 @@ document.addEventListener('DOMContentLoaded', function () {
             phoneError.textContent = '';
         }
 
-        // Проверка комментария
         const comErr = validateComment(userCom.value);
         if (comErr) {
             userCom.classList.add('error');
-            commentError.textContent = comErr;   // ← используем commentError
+            commentError.textContent = comErr;   
             isValid = false;
         } else {
             userCom.classList.remove('error');
-            commentError.textContent = '';        // ← используем commentError
+            commentError.textContent = '';        
         }
 
         if (!isValid) return;
@@ -122,7 +115,6 @@ document.addEventListener('DOMContentLoaded', function () {
             form.classList.remove('has-error');
         }
 
-        // ===== ОТПРАВКА В GOOGLE SHEET =====
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyHVUrtIoe3Urz0Opw2aRPwfFwCY1QSZDDMavPJNHFPsYrttsqGCU7a-9xWgC7CAU5ozw/exec';
 
         const formData = new FormData();
@@ -130,15 +122,11 @@ document.addEventListener('DOMContentLoaded', function () {
         formData.append('phone', phoneInput.value);
         formData.append('comment', document.getElementById('userComment').value);
 
-        // ⚡ СНАЧАЛА показываем уведомление, потом отправляем
-        // Показываем модалку Bootstrap
         const modal = new bootstrap.Modal(document.getElementById('successModal'));
         modal.show();
 
-        // Очищаем форму
         form.reset();
 
-        // Очищаем ошибки
         nameError.textContent = '';
         phoneError.textContent = '';
         commentError.textContent = '';
@@ -146,7 +134,6 @@ document.addEventListener('DOMContentLoaded', function () {
         phoneInput.classList.remove('error');
         userCom.classList.remove('error');
 
-        // Отправка уходит в фоне — не ждём её
         fetch(scriptURL, {
             method: 'POST',
             body: formData,
