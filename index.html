@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><svg viewBox="0 0 305 39" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="305.000000" height="39.000000" fill="none"
+                        customFrame="#000000">
+                        <path id="Зернышко"
+                            d="M16.256 19.324C17.4933 19.7933 18.464 20.4973 19.168 21.436C19.872 22.3747 20.224 23.452 20.224 24.668C20.224 26.0547 19.7547 27.26 18.816 28.284C17.8773 29.308 16.608 30.0973 15.008 30.652C13.408 31.1853 11.648 31.452 9.728 31.452C8.21333 31.452 6.66667 31.2707 5.088 30.908C3.53067 30.5453 2.03733 30.0013 0.608 29.276L2.496 24.86C3.49867 25.372 4.56533 25.7667 5.696 26.044C6.848 26.3 7.95733 26.428 9.024 26.428C10.432 26.428 11.584 26.204 12.48 25.756C13.376 25.2867 13.824 24.636 13.824 23.804C13.824 23.1427 13.5467 22.652 12.992 22.332C12.4373 22.012 11.6907 21.852 10.752 21.852L5.024 21.852L5.024 17.212L10.24 17.212C11.0933 17.212 11.7547 17.0413 12.224 16.7C12.6933 16.3587 12.928 15.9 12.928 15.324C12.928 14.5987 12.5653 14.044 11.84 13.66C11.1147 13.2547 10.176 13.052 9.024 13.052C8.08533 13.052 7.09333 13.1907 6.048 13.468C5.00267 13.724 4.01067 14.0973 3.072 14.588L1.216 9.788C3.60533 8.636 6.22933 8.06 9.088 8.06C10.9227 8.06 12.6187 8.32667 14.176 8.86C15.7547 9.372 17.0027 10.1187 17.92 11.1C18.8587 12.0813 19.328 13.244 19.328 14.588C19.328 15.6333 19.0507 16.572 18.496 17.404C17.9627 18.2147 17.216 18.8547 16.256 19.324ZM42.754 29.276C41.602 29.9373 40.2047 30.46 38.562 30.844C36.9193 31.228 35.2127 31.42 33.442 31.42C31.0527 31.42 29.0153 31.132 27.33 30.556C25.666 29.98 24.4073 29.18 23.554 28.156C22.722 27.132 22.306 25.948 22.306 24.604C22.306 23.4307 22.626 22.396 23.266 21.5C23.906 20.604 24.7913 19.9107 25.922 19.42C25.0473 18.972 24.3753 18.3533 23.906 17.564C23.458 16.7533 23.234 15.868 23.234 14.908C23.234 13.6707 23.618 12.54 24.386 11.516C25.1753 10.492 26.37 9.67067 27.97 9.052C29.57 8.43333 31.5433 8.124 33.89 8.124C35.362 8.124 36.8127 8.26266 38.242 8.54C39.6713 8.81733 40.93 9.19067 42.018 9.66L40.29 14.396C38.306 13.5213 36.258 13.084 34.146 13.084C32.6313 13.084 31.5007 13.2867 30.754 13.692C30.0073 14.076 29.634 14.62 29.634 15.324C29.634 16.604 30.562 17.244 32.418 17.244L38.754 17.244L38.754 22.076L32.002 22.076C30.914 22.076 30.0927 22.2573 29.538 22.62C28.9833 22.9613 28.706 23.4733 28.706 24.156C28.706 24.8813 29.1113 25.4467 29.922 25.852C30.7327 26.2573 31.9913 26.46 33.698 26.46C34.914 26.46 36.162 26.3 37.442 25.98C38.7433 25.6387 39.874 25.18 40.834 24.604L42.754 29.276ZM54.3148 8.348C57.5574 8.348 60.0854 9.12667 61.8988 10.684C63.7121 12.22 64.6188 14.3853 64.6188 17.18C64.6188 19.868 63.7974 21.9693 62.1548 23.484C60.5334 24.9773 58.2401 25.724 55.2747 25.724C53.7174 25.724 52.0854 25.4253 50.3787 24.828L50.3787 30.972L44.1387 30.972L44.1387 17.916C44.1387 14.8227 45.0028 12.4547 46.7308 10.812C48.4588 9.16933 50.9868 8.348 54.3148 8.348ZM54.2188 21.116C55.5201 21.116 56.5121 20.796 57.1948 20.156C57.8988 19.4947 58.2508 18.5453 58.2508 17.308C58.2508 16.1133 57.9094 15.1747 57.2267 14.492C56.5654 13.8093 55.6374 13.468 54.4427 13.468C53.1628 13.468 52.1601 13.852 51.4347 14.62C50.7308 15.388 50.3787 16.4653 50.3787 17.852L50.3787 20.092C51.5094 20.7747 52.7894 21.116 54.2188 21.116ZM88.8995 8.572L88.8995 30.972L82.5635 30.972L82.5635 22.236L73.9235 22.236L73.9235 30.972L67.5875 30.972L67.5875 8.572L73.9235 8.572L73.9235 16.988L82.5635 16.988L82.5635 8.572L88.8995 8.572ZM104.721 15.196C107.579 15.196 109.809 15.8893 111.409 17.276C113.008 18.6627 113.809 20.6253 113.809 23.164C113.809 25.8307 112.902 27.8893 111.089 29.34C109.275 30.7693 106.683 31.484 103.312 31.484C100.006 31.484 97.5098 30.7693 95.8245 29.34C94.1605 27.8893 93.3285 25.7453 93.3285 22.908L93.3285 8.572L99.5685 8.572L99.5685 16.22C101.339 15.5373 103.057 15.196 104.721 15.196ZM122.48 8.572L122.48 30.972L116.209 30.972L116.209 8.572L122.48 8.572ZM103.632 26.684C104.849 26.684 105.787 26.3853 106.449 25.788C107.11 25.1907 107.44 24.3587 107.44 23.292C107.44 22.1827 107.078 21.34 106.353 20.764C105.648 20.1667 104.667 19.868 103.409 19.868C102.747 19.868 102.075 19.9533 101.393 20.124C100.731 20.2947 100.123 20.5293 99.5685 20.828L99.5685 22.748C99.5685 24.0067 99.9205 24.9773 100.624 25.66C101.328 26.3427 102.331 26.684 103.632 26.684ZM157.643 8.572L157.643 30.972L127.275 30.972L127.275 8.572L133.515 8.572L133.515 25.948L139.371 25.948L139.371 8.572L145.611 8.572L145.611 25.948L151.403 25.948L151.403 8.572L157.643 8.572ZM171.487 22.396L168.607 22.396L168.607 30.972L162.303 30.972L162.303 8.572L168.607 8.572L168.607 17.276L171.647 17.276L176.991 8.572L183.647 8.572L176.639 19.388L183.711 30.972L176.575 30.972L171.487 22.396ZM196.627 31.42C194.259 31.42 192.125 30.9187 190.227 29.916C188.349 28.9133 186.867 27.5267 185.779 25.756C184.712 23.9853 184.179 21.9907 184.179 19.772C184.179 17.5533 184.712 15.5587 185.779 13.788C186.867 12.0173 188.349 10.6307 190.227 9.628C192.125 8.62533 194.259 8.124 196.627 8.124C198.995 8.124 201.117 8.62533 202.995 9.628C204.893 10.6307 206.376 12.0173 207.443 13.788C208.531 15.5587 209.075 17.5533 209.075 19.772C209.075 21.9907 208.531 23.9853 207.443 25.756C206.376 27.5267 204.893 28.9133 202.995 29.916C201.117 30.9187 198.995 31.42 196.627 31.42ZM196.627 26.172C197.757 26.172 198.781 25.9053 199.699 25.372C200.616 24.8387 201.341 24.092 201.875 23.132C202.408 22.1507 202.675 21.0307 202.675 19.772C202.675 18.5133 202.408 17.404 201.875 16.444C201.341 15.4627 200.616 14.7053 199.699 14.172C198.781 13.6387 197.757 13.372 196.627 13.372C195.496 13.372 194.472 13.6387 193.555 14.172C192.637 14.7053 191.912 15.4627 191.379 16.444C190.845 17.404 190.579 18.5133 190.579 19.772C190.579 21.0307 190.845 22.1507 191.379 23.132C191.912 24.092 192.637 24.8387 193.555 25.372C194.472 25.9053 195.496 26.172 196.627 26.172Z"
+                            fill="rgb(69,64,61)" fill-rule="nonzero" />
+                    </svg>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" id="about-us" href="#">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="header-menu" href="#">Меню</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="header-reviews" href="#">Отзывы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="header-contacts">Контакты</a>
+                        </li>
+                        <button class="navbar-button">Связаться</button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="top center">
+        <div class="top-info">
+            <h1 class="top-heading">Добро пожаловать <span class="transfer">в <span
+                        class="top-span">«</span>Зернышко<span class="top-span">»</span></span></h1>
+            <p class="top-page">Ароматный кофе и уютная атмосфера каждый день</p>
+            <p class="top-text">Мы готовим кофе с душой и верим, что каждая чашка — это маленькое наслаждение, созданное
+                для
+                вас.</p>
+            <p class="top-text">Мы предлагаем свежие зерна, уникальные авторские рецепты и заботу о природе. Наши
+                бариста рады подарить
+                вам
+                вкус и уют, из-за которых захочется возвращаться снова и снова.</p>
+            <button class="top-button">Посмотреть меню</button>
+        </div>
+        <div class="top-animation">
+            <img src="images/Mask group.png" alt="board" class="top-image">
+            <img src="images/Зерна.png" alt="coffee" class="top-image">
+            <img src="images/Cup Of Coffee.B15.2k.png" alt="coffee-cap" class="top-image">
+            <img src="images/Cinnamon Swirl Pastry.B10.2k 1 (1).png" alt="cinnamon" class="top-image">
+            <img src="images/Cookie with Chocolate Cream.B02.2k 1.png" alt="cookie" class="top-image">
+        </div>
+    </div>
+    <div class="about center">
+        <h1 class="about-heading styles">О нас</h1>
+        <div class="cards">
+            <div class="cards-container">
+                <img class="cards-img"
+                    src="images/wooden-cafe-interior-yellow-trend-color-bright-c-2024-10-18-08-13-03-utc (1).png"
+                    alt="cafe">
+                <div class="cards-info">
+                    <h2 class="cards-heading">История</h2>
+                    <p class="cards-text">
+                        «Зернышко» — кофейня, которая родилась из любви к хорошему кофе и желания создать место уюта для
+                        каждого.
+                    </p>
+                    <p class="cards-text">Открытая в 2020 году, кофейня быстро стала любимой как
+                        для ценителей
+                        кофе, так и для тех, кто
+                        просто
+                        ищет спокойное место для отдыха.</p>
+                </div>
+            </div>
+            <div class="cards-container">
+                <img class="cards-img" src="images/barista-making-classic-cappuccino-2024-10-24-03-02-32-utc 1 (1).png"
+                    alt="barista">
+                <div class="cards-info">
+                    <h2 class="cards-heading">Философия</h2>
+                    <p class="cards-text">Мы верим, что каждая чашка кофе — это особый момент.</p>
+                    <p class="cards-text">Стремимся создать теплую дружелюбную атмосферу, где каждый гость чувствует
+                        себя как дома.</p>
+                    <p class="cards-text">Наши бариста с заботой подходят к каждому заказу, создавая напитки с любовью и
+                        вниманием к деталям.</p>
+                </div>
+            </div>
+            <div class="cards-container">
+                <img class="cards-img" src="images/coffee-beans-2023-11-27-05-33-15-utc 1 (1).png" alt="coffee-beans">
+                <div class="cards-info">
+                    <h2 class="cards-heading">Свежее зерно</h2>
+                    <p class="cards-text">Мы используем только свежие зерна и экспериментируем с оригинальными
+                        рецептами, чтобы радовать гостей уникальными вкусами.</p>
+                    <p class="cards-text">Наша команда сотрудничает с локальными обжарщиками, поддерживая высокое
+                        качество и разнообразие.</p>
+                </div>
+            </div>
+            <div class="cards-container">
+                <img class="cards-img"
+                    src="images/coffee-in-eco-friendly-paper-cup-in-autumn-garden-2023-11-27-05-27-02-utc 1 (1).png"
+                    alt="coffee-eco">
+                <div class="cards-info">
+                    <h2 class="cards-heading">Забота о природе</h2>
+                    <p class="cards-text">Мы стараемся уменьшить экологический след, используя биоразлагаемые стаканчики
+                        и предлагая скидки для тех, кто приходит со своей чашкой.</p>
+                    <p class="cards-text">Мы заботимся не только о клиентах, но и о планете.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu center">
+        <div class="menu-info">
+            <h1 class="menu-heading styles">Меню</h1>
+            <div class="menu-btns">
+                <button class="menu-btn" id="menu-btn--coffee">Кофе</button>
+                <button class="menu-btn" id="menu-btn--desserts">Десерты</button>
+                <button class="menu-btn" id="menu-btn--snacks">Закуски</button>
+            </div>
+        </div>
+        <div class="menu-container" id="menu-container--1">
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/капучино.png" alt="" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">240₽</p>
+                    <p class="menu-describe">Капучино на миндальном молоке с кокосовым сиропом</p>
+                    <p class="menu-volume">350 мл</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/latte.png" alt="" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">270₽</p>
+                    <p class="menu-describe">Латте на кокосовом молокес кленовым сиропом</p>
+                    <p class="menu-volume">350 мл</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/raf.png" alt="" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">360₽</p>
+                    <p class="menu-describe">Раф с карамельным сиропоми шоколадом</p>
+                    <p class="menu-volume">250 мл</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/americano.png" alt="" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">160₽</p>
+                    <p class="menu-describe">Классический американо с зарядом бодрости</p>
+                    <p class="menu-volume">300 мл</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/flet.png" alt="" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">160₽</p>
+                    <p class="menu-describe">Флет уайт с насыщенным вкусом эфиопского эспрессо</p>
+                    <p class="menu-volume">300 мл</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/latte2.png" alt="" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">270₽</p>
+                    <p class="menu-describe">Латте на овсяном молоке с добавлением корицы</p>
+                    <p class="menu-volume">300 мл</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/exspresso.png" alt="" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">180₽</p>
+                    <p class="menu-describe">Двойной эспрессо с высоким зарядом энергии</p>
+                    <p class="menu-volume">300 мл</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/capuchino.png" alt="" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">240₽</p>
+                    <p class="menu-describe">Капучино на соевом молоке с ореховым сиропом</p>
+                    <p class="menu-volume">300 мл</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-container" id="menu-container--2">
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/almond(1).png" alt="миндаль" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">240₽</p>
+                    <p class="menu-describe">Миндаль — идеальная закуска для перекуса</p>
+                    <p class="menu-volume">200 гр</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/cookies(2).png" alt="печенье" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">360₽</p>
+                    <p class="menu-describe">Классическое печенье с кусочками шоколада</p>
+                    <p class="menu-volume">250 гр</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/bagel(3).png" alt="баранки" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">270₽</p>
+                    <p class="menu-describe">Баранки с легкой солью — отличное дополнение к кофе</p>
+                    <p class="menu-volume">350 гр</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/poppy seed bun(4).png" alt="булочка с маком" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">160₽</p>
+                    <p class="menu-describe">Булочка с маком, покрытая нежной сахарной глазурью</p>
+                    <p class="menu-volume">150 гр</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/cashew(5).png" alt="кешью" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">270₽</p>
+                    <p class="menu-describe">Свежий, хрустящий кешью — полезный перекус</p>
+                    <p class="menu-volume">300 гр</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/chocolate cookies(6).png" alt="шоколадное печенье" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">160₽</p>
+                    <p class="menu-describe">Мягкое печенье с начинкой из шоколада </p>
+                    <p class="menu-volume">150 гр</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/pancakes(7).png" alt="панкейки" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">180₽</p>
+                    <p class="menu-describe">Нежные панкейки с сладким медом и маслом</p>
+                    <p class="menu-volume">300 гр</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/triangles with cheese(8).png" alt="треугольники с сыром" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">240₽</p>
+                    <p class="menu-describe">Сытные треугольники с сырной начинкой</p>
+                    <p class="menu-volume">250 гр</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-container" id="menu-container--3">
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/Cinnabon(1).png" alt="синнабон" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">240₽</p>
+                    <p class="menu-describe">Синабон с ароматной корицей и глазурью</p>
+                    <p class="menu-volume">250 гр</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/puff pastry(2).png" alt="слойка" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">270₽</p>
+                    <p class="menu-describe">Воздушная датская слойка с нежным кремом</p>
+                    <p class="menu-volume">250 гр</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/crème brûlée(3).png" alt="крем брюле" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">360₽</p>
+                    <p class="menu-describe">Нежный крем-брюле с ягодами и карамельной корочкой </p>
+                    <p class="menu-volume">150 гр</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/a snail with an apple(4).png" alt="яблочная улитка" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">270₽</p>
+                    <p class="menu-describe">Улитка с яблочно-лимоннымджемом и изюмом</p>
+                    <p class="menu-volume">250 гр</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/chocolate cake(5).png" alt="шоколадный торт" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">160₽</p>
+                    <p class="menu-describe">Шоколадно-кофейный торт с глубоким вкусом какао</p>
+                    <p class="menu-volume">170 гр</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/tartlet(6).png" alt="тарталетка" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">180₽</p>
+                    <p class="menu-describe">Шоколадная тарталетка с кремом и малиной</p>
+                    <p class="menu-volume">150 гр</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/Medovik(7).png" alt="медовик" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">240₽</p>
+                    <p class="menu-describe">Классический медовик со сливочным кремом</p>
+                    <p class="menu-volume">250 гр</p>
+                </div>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-top">
+                    <img src="images/cinnamon cake(8).png" alt="торт с корицей" class="menu-img">
+                </div>
+                <div class="menu-bottom">
+                    <p class="menu-price">160₽</p>
+                    <p class="menu-describe">Торт с нежным кремом, корицей и шоколадом</p>
+                    <p class="menu-volume">300 гр</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reviews center">
+        <h1 class="reviews-heading styles">Отзывы</h1>
+        <div class="reviews-content">
+            <div class="reviews-card">
+                <div class="review-header">
+                    <img src="images/first.png" alt="профиль" class="review-img">
+                    <div class="review-stars">
+                        <h3 class="review-name">Ирина</h3>
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                    </div>
+                </div>
+                <p class="review-text">Очень уютное место! Всегда чувствуешь себя желанным гостем, а ваши бариста не
+                    только готовят отличный и вкусный кофе, но и могут подсказать что-то новенькое попробовать. </p>
+            </div>
+            <div class="reviews-card">
+                <div class="review-header">
+                    <img src="images/two.png" alt="профиль" class="review-img">
+                    <div class="review-stars">
+                        <h3 class="review-name">Игорь</h3>
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                    </div>
+                </div>
+                <p class="review-text">Я настоящий кофеман, и «Зернышко» удивило меня качеством! Здесь всегда свежие
+                    зерна и интересные рецепты — каждый раз нахожу новый вкус для себя. Рекомендую всем своим друзьям.
+                </p>
+            </div>
+            <div class="reviews-card">
+                <div class="review-header">
+                    <img src="images/three.png" alt="профиль" class="review-img">
+                    <div class="review-stars">
+                        <h3 class="review-name">Александр</h3>
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                    </div>
+                </div>
+                <p class="review-text">Приятно видеть, что кофейня заботится о природе. Экологичная упаковка, скидка за
+                    свою чашку — такие мелочи, а настро-ение поднимают! Приятно, что здесь думают о планете.
+                </p>
+            </div>
+            <div class="reviews-card">
+                <div class="review-header">
+                    <img src="images/four2.png" alt="профиль" class="review-img">
+                    <div class="review-stars">
+                        <h3 class="review-name">Эльза</h3>
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                    </div>
+                </div>
+                <p class="review-text">В «Зернышке» особенная атмосфера: уютно, стильно и спокойно. Идеальное место,
+                    чтобы сбежать от городской суеты, почитать книгу или просто расслабиться за чашкой кофе.</p>
+            </div>
+            <div class="reviews-card">
+                <div class="review-header">
+                    <img src="images/five.png" alt="профиль" class="review-img">
+                    <div class="review-stars">
+                        <h3 class="review-name">Андрей</h3>
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                    </div>
+                </div>
+                <p class="review-text">Бариста всегда приветливые и открытые к общению. Люблю, когда заходишь, и тебя
+                    встречают с улыбкой и вниманием к деталям. Кажется, что здесь всех знают по имени и каждому рады.
+                </p>
+            </div>
+            <div class="reviews-card">
+                <div class="review-header">
+                    <img src="images/kristi.png" alt="профиль" class="review-img">
+                    <div class="review-stars">
+                        <h3 class="review-name">Кристина</h3>
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                        <img src="images/Star 1.png" alt="star" class="review-star">
+                    </div>
+                </div>
+                <p class="review-text">Каждая чашка кофе в «Зернышке» словно маленький шедевр. Ощущается внимание к
+                    мелочам — от аромата до оформления напитка. Это то место, куда хочется возвращаться снова и снова.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="geolocation center">
+        <h1 class="geolacation-heading styles">Как нас найти</h1>
+        <div class="geolocation-content">
+            <div class="geolocation-info">
+                <div class="contacts">
+                    <h3 class="contacts-heading">Контакты</h3>
+                    <div class="contacts-row">
+                        <a class="contacts-link" href="tel:+79999999999">+7 (999) 999 99-99
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.20835 12.4584L7.66669 14.0001C7.34169 14.3251 6.82502 14.3251 6.49169 14.0084C6.40002 13.9167 6.30835 13.8334 6.21669 13.7417C5.35835 12.8751 4.58335 11.9667 3.89169 11.0167C3.20835 10.0667 2.65835 9.11675 2.25835 8.17508C1.86669 7.22508 1.66669 6.31675 1.66669 5.45008C1.66669 4.88341 1.76669 4.34175 1.96669 3.84175C2.16669 3.33341 2.48335 2.86675 2.92502 2.45008C3.45835 1.92508 4.04169 1.66675 4.65835 1.66675C4.89169 1.66675 5.12502 1.71675 5.33335 1.81675C5.55002 1.91675 5.74169 2.06675 5.89169 2.28341L7.82502 5.00841C7.97502 5.21675 8.08335 5.40841 8.15835 5.59175C8.23335 5.76675 8.27502 5.94175 8.27502 6.10008C8.27502 6.30008 8.21669 6.50008 8.10002 6.69175C7.99169 6.88341 7.83335 7.08341 7.63335 7.28341L7.00002 7.94175C6.90835 8.03341 6.86669 8.14175 6.86669 8.27508C6.86669 8.34175 6.87502 8.40008 6.89169 8.46675C6.91669 8.53341 6.94169 8.58341 6.95835 8.63341C7.10835 8.90841 7.36669 9.26675 7.73335 9.70008C8.10835 10.1334 8.50835 10.5751 8.94169 11.0167C9.02502 11.1001 9.11669 11.1834 9.20002 11.2667C9.53335 11.5917 9.54169 12.1251 9.20835 12.4584Z"
+                                    fill="#45403D" />
+                                <path
+                                    d="M18.3083 15.275C18.3083 15.5083 18.2667 15.75 18.1833 15.9833C18.1583 16.05 18.1333 16.1166 18.1 16.1833C17.9583 16.4833 17.775 16.7666 17.5333 17.0333C17.125 17.4833 16.675 17.8083 16.1667 18.0166C16.1583 18.0166 16.15 18.025 16.1417 18.025C15.65 18.225 15.1167 18.3333 14.5417 18.3333C13.6917 18.3333 12.7833 18.1333 11.825 17.725C10.8667 17.3166 9.90833 16.7666 8.95833 16.075C8.63333 15.8333 8.30833 15.5916 8 15.3333L10.725 12.6083C10.9583 12.7833 11.1667 12.9166 11.3417 13.0083C11.3833 13.025 11.4333 13.05 11.4917 13.075C11.5583 13.1 11.625 13.1083 11.7 13.1083C11.8417 13.1083 11.95 13.0583 12.0417 12.9666L12.675 12.3416C12.8833 12.1333 13.0833 11.975 13.275 11.875C13.4667 11.7583 13.6583 11.7 13.8667 11.7C14.025 11.7 14.1917 11.7333 14.375 11.8083C14.5583 11.8833 14.75 11.9916 14.9583 12.1333L17.7167 14.0916C17.9333 14.2416 18.0833 14.4166 18.175 14.625C18.2583 14.8333 18.3083 15.0416 18.3083 15.275Z"
+                                    fill="#45403D" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="contacts-row">
+                        <a class="contacts-link" href="mailto:zernyshko@mail.ru">zernyshko@mail.ru
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.5 0H4.16667C1.66667 0 0 1.25 0 4.16667V10C0 12.9167 1.66667 14.1667 4.16667 14.1667H12.5C15 14.1667 16.6667 12.9167 16.6667 10V4.16667C16.6667 1.25 15 0 12.5 0ZM12.8917 5.075L10.2833 7.15833C9.73333 7.6 9.03333 7.81667 8.33333 7.81667C7.63333 7.81667 6.925 7.6 6.38333 7.15833L3.775 5.075C3.50833 4.85833 3.46667 4.45833 3.675 4.19167C3.89167 3.925 4.28333 3.875 4.55 4.09167L7.15833 6.175C7.79167 6.68333 8.86667 6.68333 9.5 6.175L12.1083 4.09167C12.375 3.875 12.775 3.91667 12.9833 4.19167C13.2 4.45833 13.1583 4.85833 12.8917 5.075Z"
+                                    fill="#45403D" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="contacts-row">
+                        <a class="contacts-link" href="#">СПб, Коржекова, 5
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.1834 7.04158C16.3084 3.19159 12.95 1.45825 10 1.45825C10 1.45825 10 1.45825 9.99168 1.45825C7.05002 1.45825 3.68335 3.18325 2.80835 7.03325C1.83335 11.3333 4.46669 14.9749 6.85002 17.2666C7.73335 18.1166 8.86668 18.5416 10 18.5416C11.1334 18.5416 12.2667 18.1166 13.1417 17.2666C15.525 14.9749 18.1584 11.3416 17.1834 7.04158ZM10 11.2166C8.55002 11.2166 7.37502 10.0416 7.37502 8.59159C7.37502 7.14158 8.55002 5.96658 10 5.96658C11.45 5.96658 12.625 7.14158 12.625 8.59159C12.625 10.0416 11.45 11.2166 10 11.2166Z"
+                                    fill="#45403D" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="booking">
+                    <form action="#" method="POST" class="booking-form" id="bookingForm" novalidate>
+                        <h3 class="booking-heading">Бронирование</h3>
+
+                        <div class="form-group">
+                            <input class="booking-input" placeholder="Ваше имя" type="text" name="name" id="userName">
+                            <span class="form-error" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input class="booking-input" placeholder="Ваш номер телефона" type="tel" name="phone"
+                                id="userPhone">
+                            <span class="form-error" id="phoneError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input class="booking-input" placeholder="Комментарий" type="text" name="comment"
+                                id="userComment">
+                            <span class="form-error" id="commentError"></span>
+                        </div>
+
+                        <button class="booking-btn" type="submit">Забронировать</button>
+
+                        <div class="form-success" id="formSuccess" style="display: none;">
+                            Спасибо! Ваша заявка отправлена.
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- МОДАЛЬНОЕ ОКНО УСПЕХА -->
+            <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content success-modal">
+
+                        <!-- Крестик в углу -->
+                        <button type="button" class="success-close" data-bs-dismiss="modal" aria-label="Закрыть">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4L4 12M4 4L12 12" stroke="#9A9A9A" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+
+                        <div class="modal-body text-center">
+
+                            <!-- Иконка галочки -->
+                            <div class="success-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="28" fill="#4CAF50" />
+                                    <path d="M18 30L26 38L42 22" stroke="#FFFFFF" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+
+                            <h3 class="success-title">Спасибо!</h3>
+                            <p class="success-text">Данные успешно отправлены.</p>
+
+                            <button type="button" class="success-btn" data-bs-dismiss="modal">Хорошо</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="geolocation-card">
+                <img src="images/card (1).png" alt="card" class="geolocation-img">
+                <img src="images/geolocation.png" alt="geolocation" class="geolocation-place">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <a class="navbar-brand" href="#"><svg viewBox="0 0 305 39" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="305.000000" height="39.000000" fill="none"
+                            customFrame="#000000">
+                            <path id="Зернышко"
+                                d="M16.256 19.324C17.4933 19.7933 18.464 20.4973 19.168 21.436C19.872 22.3747 20.224 23.452 20.224 24.668C20.224 26.0547 19.7547 27.26 18.816 28.284C17.8773 29.308 16.608 30.0973 15.008 30.652C13.408 31.1853 11.648 31.452 9.728 31.452C8.21333 31.452 6.66667 31.2707 5.088 30.908C3.53067 30.5453 2.03733 30.0013 0.608 29.276L2.496 24.86C3.49867 25.372 4.56533 25.7667 5.696 26.044C6.848 26.3 7.95733 26.428 9.024 26.428C10.432 26.428 11.584 26.204 12.48 25.756C13.376 25.2867 13.824 24.636 13.824 23.804C13.824 23.1427 13.5467 22.652 12.992 22.332C12.4373 22.012 11.6907 21.852 10.752 21.852L5.024 21.852L5.024 17.212L10.24 17.212C11.0933 17.212 11.7547 17.0413 12.224 16.7C12.6933 16.3587 12.928 15.9 12.928 15.324C12.928 14.5987 12.5653 14.044 11.84 13.66C11.1147 13.2547 10.176 13.052 9.024 13.052C8.08533 13.052 7.09333 13.1907 6.048 13.468C5.00267 13.724 4.01067 14.0973 3.072 14.588L1.216 9.788C3.60533 8.636 6.22933 8.06 9.088 8.06C10.9227 8.06 12.6187 8.32667 14.176 8.86C15.7547 9.372 17.0027 10.1187 17.92 11.1C18.8587 12.0813 19.328 13.244 19.328 14.588C19.328 15.6333 19.0507 16.572 18.496 17.404C17.9627 18.2147 17.216 18.8547 16.256 19.324ZM42.754 29.276C41.602 29.9373 40.2047 30.46 38.562 30.844C36.9193 31.228 35.2127 31.42 33.442 31.42C31.0527 31.42 29.0153 31.132 27.33 30.556C25.666 29.98 24.4073 29.18 23.554 28.156C22.722 27.132 22.306 25.948 22.306 24.604C22.306 23.4307 22.626 22.396 23.266 21.5C23.906 20.604 24.7913 19.9107 25.922 19.42C25.0473 18.972 24.3753 18.3533 23.906 17.564C23.458 16.7533 23.234 15.868 23.234 14.908C23.234 13.6707 23.618 12.54 24.386 11.516C25.1753 10.492 26.37 9.67067 27.97 9.052C29.57 8.43333 31.5433 8.124 33.89 8.124C35.362 8.124 36.8127 8.26266 38.242 8.54C39.6713 8.81733 40.93 9.19067 42.018 9.66L40.29 14.396C38.306 13.5213 36.258 13.084 34.146 13.084C32.6313 13.084 31.5007 13.2867 30.754 13.692C30.0073 14.076 29.634 14.62 29.634 15.324C29.634 16.604 30.562 17.244 32.418 17.244L38.754 17.244L38.754 22.076L32.002 22.076C30.914 22.076 30.0927 22.2573 29.538 22.62C28.9833 22.9613 28.706 23.4733 28.706 24.156C28.706 24.8813 29.1113 25.4467 29.922 25.852C30.7327 26.2573 31.9913 26.46 33.698 26.46C34.914 26.46 36.162 26.3 37.442 25.98C38.7433 25.6387 39.874 25.18 40.834 24.604L42.754 29.276ZM54.3148 8.348C57.5574 8.348 60.0854 9.12667 61.8988 10.684C63.7121 12.22 64.6188 14.3853 64.6188 17.18C64.6188 19.868 63.7974 21.9693 62.1548 23.484C60.5334 24.9773 58.2401 25.724 55.2747 25.724C53.7174 25.724 52.0854 25.4253 50.3787 24.828L50.3787 30.972L44.1387 30.972L44.1387 17.916C44.1387 14.8227 45.0028 12.4547 46.7308 10.812C48.4588 9.16933 50.9868 8.348 54.3148 8.348ZM54.2188 21.116C55.5201 21.116 56.5121 20.796 57.1948 20.156C57.8988 19.4947 58.2508 18.5453 58.2508 17.308C58.2508 16.1133 57.9094 15.1747 57.2267 14.492C56.5654 13.8093 55.6374 13.468 54.4427 13.468C53.1628 13.468 52.1601 13.852 51.4347 14.62C50.7308 15.388 50.3787 16.4653 50.3787 17.852L50.3787 20.092C51.5094 20.7747 52.7894 21.116 54.2188 21.116ZM88.8995 8.572L88.8995 30.972L82.5635 30.972L82.5635 22.236L73.9235 22.236L73.9235 30.972L67.5875 30.972L67.5875 8.572L73.9235 8.572L73.9235 16.988L82.5635 16.988L82.5635 8.572L88.8995 8.572ZM104.721 15.196C107.579 15.196 109.809 15.8893 111.409 17.276C113.008 18.6627 113.809 20.6253 113.809 23.164C113.809 25.8307 112.902 27.8893 111.089 29.34C109.275 30.7693 106.683 31.484 103.312 31.484C100.006 31.484 97.5098 30.7693 95.8245 29.34C94.1605 27.8893 93.3285 25.7453 93.3285 22.908L93.3285 8.572L99.5685 8.572L99.5685 16.22C101.339 15.5373 103.057 15.196 104.721 15.196ZM122.48 8.572L122.48 30.972L116.209 30.972L116.209 8.572L122.48 8.572ZM103.632 26.684C104.849 26.684 105.787 26.3853 106.449 25.788C107.11 25.1907 107.44 24.3587 107.44 23.292C107.44 22.1827 107.078 21.34 106.353 20.764C105.648 20.1667 104.667 19.868 103.409 19.868C102.747 19.868 102.075 19.9533 101.393 20.124C100.731 20.2947 100.123 20.5293 99.5685 20.828L99.5685 22.748C99.5685 24.0067 99.9205 24.9773 100.624 25.66C101.328 26.3427 102.331 26.684 103.632 26.684ZM157.643 8.572L157.643 30.972L127.275 30.972L127.275 8.572L133.515 8.572L133.515 25.948L139.371 25.948L139.371 8.572L145.611 8.572L145.611 25.948L151.403 25.948L151.403 8.572L157.643 8.572ZM171.487 22.396L168.607 22.396L168.607 30.972L162.303 30.972L162.303 8.572L168.607 8.572L168.607 17.276L171.647 17.276L176.991 8.572L183.647 8.572L176.639 19.388L183.711 30.972L176.575 30.972L171.487 22.396ZM196.627 31.42C194.259 31.42 192.125 30.9187 190.227 29.916C188.349 28.9133 186.867 27.5267 185.779 25.756C184.712 23.9853 184.179 21.9907 184.179 19.772C184.179 17.5533 184.712 15.5587 185.779 13.788C186.867 12.0173 188.349 10.6307 190.227 9.628C192.125 8.62533 194.259 8.124 196.627 8.124C198.995 8.124 201.117 8.62533 202.995 9.628C204.893 10.6307 206.376 12.0173 207.443 13.788C208.531 15.5587 209.075 17.5533 209.075 19.772C209.075 21.9907 208.531 23.9853 207.443 25.756C206.376 27.5267 204.893 28.9133 202.995 29.916C201.117 30.9187 198.995 31.42 196.627 31.42ZM196.627 26.172C197.757 26.172 198.781 25.9053 199.699 25.372C200.616 24.8387 201.341 24.092 201.875 23.132C202.408 22.1507 202.675 21.0307 202.675 19.772C202.675 18.5133 202.408 17.404 201.875 16.444C201.341 15.4627 200.616 14.7053 199.699 14.172C198.781 13.6387 197.757 13.372 196.627 13.372C195.496 13.372 194.472 13.6387 193.555 14.172C192.637 14.7053 191.912 15.4627 191.379 16.444C190.845 17.404 190.579 18.5133 190.579 19.772C190.579 21.0307 190.845 22.1507 191.379 23.132C191.912 24.092 192.637 24.8387 193.555 25.372C194.472 25.9053 195.496 26.172 196.627 26.172Z"
+                                fill="rgb(69,64,61)" fill-rule="nonzero" />
+                        </svg>
+                    </a>
+                    <span class="container-text">&copy; 2025 Все права защищены</span>
+                </div>
+                <div class="footer-nav">
+                    <ul class="footer-links">
+                        <li class="footer-link">
+                            <a class="nav-link" id="about-us" href="#">О нас</a>
+                        </li>
+                        <li class="footer-link">
+                            <a class="nav-link" id="menu-foot" href="#">Меню</a>
+                        </li>
+                        <li class="footer-link">
+                            <a class="nav-link" id="reviews-foot" href="#">Отзывы</a>
+                        </li>
+                        <li class="footer-link">
+                            <a class="nav-link" id="contacts-foot">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</html>
