@@ -6,7 +6,7 @@
 [Посмотреть сайт](zernyshko-coffee.netlify.app)
 
 ## 📎 Портфолио
-Посмотреть все работы: https://your-finances.tilda.ws
+[Посмотреть все работы](https://your-finances.tilda.ws)
 
 ## 📋 Что реализовано
 - Гибкая вёрстка (flex-wrap)
