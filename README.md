@@ -3,7 +3,7 @@
 Одностраничный сайт кофейни с формой бронирования столиков.
 
 ## 🔗 Демо
-[Посмотреть сайт](zernyshko-coffee.netlify.app)
+[Посмотреть сайт](https://zernyshko-coffee.netlify.app)
 
 ## 📎 Портфолио
 [Посмотреть все работы](https://your-finances.tilda.ws)
